@@ -1,0 +1,558 @@
+/********** Template CSS **********/
+:root {
+    --primary:#F4B400;
+    --secondary:#E0A800;
+    --light:#F5F5F5;
+    --dark:#000000;
+
+    --white: #FFFFFF;
+    --text-primary: #000000;
+    --text-secondary: #666666;
+    --border: #EDEDED;
+    --highlight: #FFF3CD;  /*light  yellow */
+}
+*{
+    transition: all 0.3s ease;
+}
+/*  Replace bg-light with your highlight color */
+.bg-light {
+    background-color: var(--highlight) !important;
+}
+
+/* Ensure icon uses your primary color */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Dancing+Script:wght@600&display=swap');
+
+body {
+    font-family: 'Jost', sans-serif; /* Main professional font */
+}
+
+.script-tagline {
+    font-family: 'Dancing Script', cursive; /* For the "Caring for you" sections */
+    color: var(--dark);
+    font-size: 1.5rem;
+}
+.brand-wrap {
+    display: flex;
+    flex-direction: column;   /* forces vertical stacking */
+    line-height: 1.2;
+}
+
+.brand-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #F4B400;
+    text-transform: uppercase;
+}
+
+.brand-tagline {
+    font-size: 12px;
+    color: #6c757d;
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
+
+h1, h2, h4, .navbar-nav .nav-link {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase; /* Matches the flyer headers */
+}
+.custom-brand-color {
+    color: #F4B400; /* Matching the yellow hue from the edit */
+}
+
+
+.btn {
+    font-weight: 700;
+    transition: .5s;
+color: var(--white);
+}
+
+.btn:hover {
+    -webkit-box-shadow: 0 8px 6px -6px #555555;
+    -moz-box-shadow: 0 8px 6px -6px #555555;
+    box-shadow: 0 8px 6px -6px #555555;
+/* Slight lift effect to make it feel interactive */
+    transform: translateY(-2px);
+    color: var(--white);}
+
+.btn-primary {
+  background-color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-primary:hover {
+    background-color: var(--secondary); /* Darker yellow on hover */
+    border-color: var(--secondary);
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 28px;
+    height: 28px;
+}
+
+.btn-lg-square {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+    z-index: 99;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Jost', sans-serif;
+    position: relative;
+    margin-left: 30px;
+    padding: 30px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark);
+    outline: none;
+    transition: .5s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+.tagline {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+
+@media (min-width: 992px) {
+    .navbar-light .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 5px;
+        bottom: 0;
+        left: 50%;
+        background: var(--primary);
+        transition: .5s;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover::before,
+    .navbar-light .navbar-nav .nav-link.active::before {
+        width: 100%;
+        left: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link  {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+}
+.hero-header h1 {
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.hero-title {
+    font-size: 48px;   /* desktop */
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 32px;   /* tablet */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 26px;   /* mobile */
+    }
+}
+
+.hero-header h5 {
+    font-weight: 600;
+}
+.hero-title {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+.hero-header {
+    background: url(../img/Sundesha_Healthcare_1.webp) top right no-repeat;
+    background-size: cover;
+}
+.hero-header {
+    position: relative;
+}
+
+/* Dark overlay */
+.hero-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55); /* adjust 0.4–0.7 if needed */
+    z-index: 1;
+}
+
+/* Keep text above overlay */
+.hero-header .container {
+    position: relative;
+    z-index: 2;
+}
+/* Yellow Button */
+.hero-btn-primary {
+    background-color: #F4B400;
+    color: #000;
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-weight: 600;
+    border: none;
+    transition: 0.3s;
+}
+
+.hero-btn-primary:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Outline Button */
+.hero-btn-outline {
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-weight: 600;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.hero-btn-outline:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.service-item {
+    position: relative;
+    height: 350px;
+    padding: 0 30px;
+    transition: .5s;
+}
+
+.service-item .service-icon {
+    width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 50%;
+    transform: rotate(-14deg);
+}
+
+.service-item .service-icon i {
+    transform: rotate(15deg);
+}
+
+.service-item a.btn {
+    position: absolute;
+    width: 60px;
+    bottom: -48px;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0;
+}
+
+.service-item:hover a.btn {
+    bottom: -24px;
+    opacity: 1;
+}
+/* WHY US ICON STYLE FIX start */
+.why-us-item .btn-lg-square {
+    background-color: #FFF3CD !important; /* light yellow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+/* Icon color */
+.why-us-item .btn-lg-square i {
+    color: #E0A800 !important; /* dark yellow */
+    transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.why-us-item:hover .btn-lg-square {
+    background-color: #000000 !important;
+}
+
+.why-us-item:hover .btn-lg-square i {
+    color: #FFFFFF !important;
+}
+/* WHY US ICON STYLE FIX End*/
+.price-carousel::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background: var(--primary);
+    border-radius: 8px 8px 50% 50%;
+    z-index: -1;
+}
+
+.price-carousel .owl-nav {
+    margin-top: 35px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.price-carousel .owl-nav .owl-prev,
+.price-carousel .owl-nav .owl-next{
+    position: relative;
+    margin: 0 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: #FFFFFF;
+    font-size: 22px;
+    border-radius: 45px;
+    transition: .5s;
+}
+
+.price-carousel .owl-nav .owl-prev:hover,
+.price-carousel .owl-nav .owl-next:hover {
+    color: var(--dark);
+}
+
+@media (min-width: 576px) {
+    .team-item .row {
+        height: 350px;
+    }
+}
+
+.team-carousel .owl-nav {
+    position: absolute;
+    padding: 0 45px;
+    width: 100%;
+    height: 45px;
+    top: calc(50% - 22.5px);
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-carousel .owl-nav .owl-prev,
+.team-carousel .owl-nav .owl-next {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: var(--primary);
+    border-radius: 45px;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.team-carousel .owl-nav .owl-prev:hover,
+.team-carousel .owl-nav .owl-next:hover {
+    background: var(--dark);
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    background: var(--light);
+    border: 2px solid var(--primary);
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+}
+
+.testimonial-carousel .owl-item img {
+    width: 150px;
+    height: 150px;
+}
+
+
+/* Custom Hover Effect for About Icons */
+#About .bg-light {
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.mb-0{
+color:var(--dark);
+}
+#About .bg-light:hover {
+    background-color: #000000 !important; /* Deep Blue from your palette */
+    transform: translateY(-10px); /* Lifts the circle up */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: var(--secondary); /* Aqua border on hover */
+}
+
+/* Change Icon and Text color on Hover */
+#About .bg-light:hover i, 
+#About .bg-light:hover h6, 
+#About .bg-light:hover small {
+    color: #ffffff !important;
+}
+
+/* Add a slight spin or grow to the icon itself */
+#About .bg-light:hover i {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+/* Custom Hover Effect for About Icons End */
+
+
+/* Service Start*/ 
+
+.service-icon i {
+    transition: color 0.3s ease-in-out;
+}
+
+/* Change icon color when the card is hovered */
+.service-item:hover .service-icon i {
+    color: var(--secondary) !important; /* Your brand primary blue */
+}
+
+/* Optional: If you want the background of the icon circle to change too */
+.service-item:hover .service-icon {
+    background-color: #ffffff !important; /* Swaps to white bg so blue icon pops */
+    transition: background-color 0.3s ease;
+}
+
+
+/* Service End*/ 
+.card-title i {
+    color: var(--primary);
+}
+.btn-outline-primary {
+    font-weight: 600;
+}
+/* FIX GET DIRECTIONS BUTTON */
+.btn-outline-primary {
+    color: #000 !important;
+    border: 2px solid #000 !important;
+    background-color: transparent !important;
+}
+
+/* HOVER */
+.btn-outline-primary:hover {
+    background-color: #000 !important;   /* black background */
+    color: #ffffff !important;           /* white text */
+    border-color: #000 !important;       /* black border */
+}
+
+/* REMOVE bootstrap blue focus glow */
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    box-shadow: none !important;
+}
+
+/*Footer Start Footer Custom Color Overrides  Footer background and text */
+.bg-dark {
+    background-color: #000000 !important; /* Pure dark from your --dark variable */
+}
+
+.footer-container h4 {
+    color: var(--primary) !important; /* Headings in Yellow */
+    border-color: var(--secondary) !important; /* Accent border in Darker Yellow */
+}
+
+/* Footer icons and links */
+.footer-container i.text-primary,
+.footer-container a.text-light:hover {
+    color: var(--primary) !important; /* Small icons and link hover state */
+}
+
+.footer-container a.text-light i {
+    color: var(--primary) !important; /* Arrow icons in yellow */
+}
+
+/* Newsletter Input and Button */
+.footer-container .input-group .form-control {
+    background: #1a1a1a; /* Very dark grey for the input box */
+    color: #ffffff;
+    border: 1px solid #333333;
+}
+.footer-bottom {
+    border-top: 1px solid var(--primary);
+}
+.footer-container .input-group .btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--dark); /* Dark text on yellow button for readability */
+}
+
+.footer-container .input-group .btn-primary:hover {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+/* Social Media Circles in Footer */
+.footer-container .btn-lg-square {
+    background-color: var(--primary) !important;
+    color: var(--dark) !important; /* Dark icon on yellow circle */
+    border: none;
+}
+
+.footer-container .btn-lg-square:hover {
+    background-color: var(--white) !important;
+    color: var(--primary) !important;
+    box-shadow: 0 4px 15px rgba(244, 180, 0, 0.3);
+}
+/* Footer End */

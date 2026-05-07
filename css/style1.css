@@ -1,0 +1,87 @@
+:root {
+    --primary:#F4B400;
+    --secondary:#E0A800;
+    --dark:#000;
+    --light:#FFF3CD;
+}
+
+/* GLOBAL */
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* NAVBAR */
+.brand {
+    color: var(--primary);
+    font-size: 22px;
+}
+
+.tagline {
+    font-size: 12px;
+    color: #555;
+}
+
+/* HERO */
+.hero {
+    background: #f8f9fa;
+}
+
+/* SECTION TAG */
+.section-tag {
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+    display: inline-block;
+}
+
+/* SERVICE */
+.service-card {
+    background: var(--light);
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-card i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ABOUT */
+.about-box {
+    background: var(--light);
+    padding: 20px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 50px;
+}
+
+/* FOOTER */
+.footer {
+    background: black;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .brand {
+        font-size: 18px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+}
